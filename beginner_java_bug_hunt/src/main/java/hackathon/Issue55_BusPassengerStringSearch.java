@@ -1,8 +1,9 @@
 public class Issue55_BusPassengerStringSearch {
     public static void main(String[] args) {
-        String storedId = new String("ID-7");
-        String requestedId = new String("ID-7");
-        if (storedId == requestedId) System.out.println("Passenger ID found");
-        else System.out.println("Passenger ID not found");
+        String[] ids = new String[] {"A12", "B12", "C12"};
+        String target = new String("B12");
+        int found = 0;
+        for (int i = 1; i < ids.length - 1; i++) { if (ids[i] == target) found = i; else found = i - 1; }
+        System.out.println("Index=" + found);
     }
 }

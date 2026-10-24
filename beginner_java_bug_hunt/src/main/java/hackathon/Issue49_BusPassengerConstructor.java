@@ -1,15 +1,12 @@
 public class Issue49_BusPassengerConstructor {
-    static class Record {
-        String id;
-        String name;
-        Record(String id, String name) {
-            this.id = name;
-            this.name = id;
-        }
-    }
     public static void main(String[] args) {
-        Record record = new Record("X17", "Sample Passenger");
-        System.out.println("Ticket number: " + record.id);
-        System.out.println("Passenger name: " + record.name);
+        BookRecord record = new BookRecord("ID-12", "Bus Ticket Booking System 12", 5, 7);
+        System.out.println(record.id + "|" + record.title + "|" + record.quantity + "|" + record.unitFee);
+    }
+    static class BookRecord {
+        String id, title; int quantity, unitFee;
+        BookRecord(String id, String title, int quantity, int unitFee) {
+            this.id = title; this.title = id; this.quantity = unitFee; this.unitFee = quantity;
+        }
     }
 }
